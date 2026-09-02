@@ -280,6 +280,10 @@ class Program:
         Log.output("Saved startup information.", "Thread")
     # requests, loads, and stores minecraft account data
     def storeAccountData() -> bool:
+        # validation needs cleaning up
+        # for now this avoids unnecessary requests
+        if len(Program.config["user"]["name"]) > 16 or len(Program.config["user"]["name"]) < 3:
+            raise ValueError("Username is invalid! Please set a valid username.")
         try:
             r = requests.get(f"https://api.mojang.com/minecraft/profile/lookup/name/{Program.config["user"]["name"]}").json()
         except:
@@ -310,6 +314,7 @@ class Program:
         Log.output("Loaded external files.", "Thread")
 
         resetTime = Program.config["program"]["resetTime"]
+        # This check will clamp reset time or set to a recommended time if the provided value lies out of range
         if (type(resetTime) != int) or (resetTime < 4) or (resetTime > 45):
             raise ValueError(f"Invalid reset time! Reset time must be an integer (whole number) between 4 and 45. Not a {type(resetTime)} of value {resetTime}")
         if type(Program.config["user"]["API-Key"]) != str:

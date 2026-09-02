@@ -1,0 +1,25 @@
+user:
+  name: "<YOUR-MINECRAFT-USERNAME-HERE>"
+  API-Key: "<YOUR-API-KEY-HERE>" #API keys are considered sensitive data. Do NOT share with others. You can generate a key by logging in to https://gateway.noxcrew.com
+
+program:
+  # The wait time between each statistic update in minutes
+  # Only accepts integer (whole) values
+  # Cannot be lower than 4 to prevent rate limiting
+  # Max is 45
+  resetTime: 15
+
+# All are disabled by default
+# If all are left off, the api will return player username only and no widget files will be updated
+#
+# Only enabled the data you need
+# Queries and data processing can be heavy with all options enabled
+# Especially on low end machines
+#
+# In the future, individual statistics will be able to be toggled for a more optimised experience
+getData:
+  trophyLeveling:
+    overallData: false
+    fishingData: false
+    styleData: false
+    skillTrophies: false
