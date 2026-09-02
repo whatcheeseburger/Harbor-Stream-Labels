@@ -3,7 +3,7 @@ import datetime as dt
 
 # -----INFO-----
 # 
-# NON-FUNCTIONAL VERSION OF HSL - DO NOT RUN / COMPILE
+# THIS VERSION OF HSL IS NOW COMPLETE
 #
 # Code is messy and probably incredibly inefficent as I'm not a professional
 # Hopefully with enough updates it can be cleaned up as I learn more
@@ -348,6 +348,7 @@ class Program:
             Log.output("Computed additional data.", "Thread")
             Program.updateLabelData(fullResponse["data"]["player"])
             Log.output("Updated label content.", "Thread")
+            Log.saveMem()
         else:
             raise ValueError("No query to send! This is an internal error. Consider creating a bug report.")
 
@@ -643,11 +644,11 @@ def main():
 
     Program.executeStartup()
     Log.output("Starting main loop.", "Thread")
-    """while True:
+    while True:
         Program.mainLoop()
-        # wait a configured number of minutes between data updates
-        # recommended is 15
-        time.sleep(Program.config["program"]["resetTime"] * 60)"""
+        # Wait a configured number of minutes between data updates
+        # Recommended is 15
+        time.sleep(Program.config["program"]["resetTime"] * 60)
 
 if __name__ == "__main__":
     main()
