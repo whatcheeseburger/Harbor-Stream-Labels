@@ -1,6 +1,6 @@
 
 # Harbor-Stream-Labels
-HTTP Client written in Python to create and update resources that can be used to display statistics for the MCC Island Minecraft server on an OBS scene.
+A basic HTTP Client written in Python to create and update resources that can be used to display statistics for the MCC Island Minecraft server on an OBS scene.
 
 ## What is this project for?
 
