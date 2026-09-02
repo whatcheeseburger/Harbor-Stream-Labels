@@ -5,7 +5,7 @@ A basic HTTP Client written in Python to create and update resources that can be
 ## What is this project for?
 
 I created the concept for HarborSL when I wanted a way to display some of my statistics on my livestreams.  
-The program (at `v0.0.4-beta` and earlier) was created in 11 days as a summer assignment from my college to create 'a utility software or game'. I think I may have done much more than was expected but it was good motivation to create this project eventually and it was the only idea I had. 
+The program (at `v0.0.4-beta` and earlier) was created in 11 days as a summer assignment to create 'a utility software or game'. I think I may have done much more than was expected but it was good motivation to create this project eventually and it was the only idea I had. 
 
 ## How to use?
 
