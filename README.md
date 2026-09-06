@@ -1,5 +1,9 @@
 
 # Harbor-Stream-Labels
+
+## WARNING: I do NOT recommend this program is used at all for the time being but the code may be viewed freely. This program will NOT work if you don't provide a valid API key and username. These fields are not necessarily entirely validated so only run the program if you are SURE fields are correct. Running this program incorrectly may also result in the creation of files in unwanted places and crashes. All of these issues will be fixed in the future.
+
+
 A basic HTTP Client written in Python to create and update resources that can be used to display statistics for the MCC Island Minecraft server on an OBS scene.
 
 ## What is this project for?
