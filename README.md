@@ -3,7 +3,7 @@
 
 A basic HTTP Client written in Python to create and update resources that can be used to display statistics for the MCC Island Minecraft server on an OBS scene.
 
-## WARNING: I do NOT recommend this program is used at all for the time being but the code may be viewed freely. This program will NOT work if you don't provide a valid API key and username. These fields are not necessarily entirely validated so only run the program if you are SURE fields are correct. Running this program incorrectly may also result in the creation of files in unwanted places and the program itself close unexpectedly. All of these issues will be fixed in the future. (Note: Under the correct setup, this program functions correctly and as intended)
+## WARNING: I do NOT recommend this program is used at all for the time being but the code may be viewed freely. This program will NOT work if you don't provide a valid API key and username. These fields are not necessarily entirely validated so only run the program if you are SURE fields are correct. Running this program incorrectly may also result in the creation of files in unwanted places and the program itself closing unexpectedly. All of these issues will be fixed in the future. (Note: Under the correct setup, this program functions correctly and as intended)
 
 ## What is this project for?
 
