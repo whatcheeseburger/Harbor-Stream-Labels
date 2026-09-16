@@ -1,4 +1,4 @@
-import requests, yaml, json, base64, uuid, time, os
+import requests, yaml, json, uuid, time, os
 import datetime as dt
 
 # -----INFO-----
@@ -282,7 +282,11 @@ class Program:
     def storeAccountData() -> bool:
         # validation needs cleaning up
         # for now this avoids unnecessary requests
-        if len(Program.config["user"]["name"]) > 16 or len(Program.config["user"]["name"]) < 3:
+        # changed this condition to be a bit neater
+        # before it used a double comparison (< and >) which accessed Program.config["user"]["name"] twice
+        # now with single access by checking if it exists in the range object
+        # for reference, range is (inclusive, exclusive) so the max length for usernames is actually 16 and not the 17 seen here in the range definition
+        if not len(Program.config["user"]["name"]) in range(3, 17):
             raise ValueError("Username is invalid! Please set a valid username.")
         try:
             r = requests.get(f"https://api.mojang.com/minecraft/profile/lookup/name/{Program.config["user"]["name"]}").json()
