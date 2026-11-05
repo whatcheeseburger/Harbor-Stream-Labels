@@ -13,25 +13,6 @@ import datetime as dt
 # The use of a "#" instead of a "." is used to represent that this is a property being accessed from an instance of that class
 # "instanceName.property..." where "instanceName" is an instance of the "ClassName" class is an example of how such comments can be interpreted and used in code
 # The Paper API docs do the same thing so I may as well too
-#
-# To download island images, TheMysterys IslandCDN is used for now until a better solution is found
-# Note: this service enforces undocumented rate limiting most likely something to do with cloudflare so images may occasionally take a while to download
-# To avoid unauthorised distribution of MCC Island/Noxcrew assets, these icons will never be packaged with the program and will be downloaded and overwritten as needed
-# IslandCDN itself will be shut down indefinitley at an unknown but not too distant date and will become unusable as a result
-# This version of HSL will not work once this happens
-#
-# -----MODULE PURPOSES-----
-#
-# no idea why i made this list
-#
-# requests - Makes http requests to both the MCC Island and Mojang APIs
-# yaml (PyYaml) - reads, writes and converts .yml files to other formats including json and python dictionaries
-# json - converts json strings into python dictionaries and vice versa
-# base64 - used once for decoding base64 information returned by the mojang API
-# os - primarily used for generating file paths
-# uuid - used only to add hyphens to a uuid in the correct places as the mojang API returns uuids without them while the MCCI API requires them
-# time - used to add a delay between statistic refreshes, this pauses the main thread for the given time so will not be used when Harbor moves to a Tkinter GUI
-# datetime - dt alias applied on import. provides the current date and time to be added at the beginning of
 
 class Log:
 
